@@ -19,6 +19,8 @@ export DALLE="$(curl https://api.openai.com/v1/images/edits \
 echo $DALLE_EDITS | jq -c .
 ```
 
+Give it a sec... OpenAI takes about ~20-40s to produce results.
+
 ```sh { interactive=false mimeType=image/png }
 curl -Ns "$(echo $DALLE | jq -r '.data[0].url')"
 ```
