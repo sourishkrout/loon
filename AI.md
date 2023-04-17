@@ -1,5 +1,7 @@
 ## Luna 🐶 exploring AI 💡 with OpenAI's DALL-E
 
+[![](https://badgen.net/badge/Open%20with/Runme/5B3ADF?icon=https://runme.dev/img/logo.svg)](https://runme.dev/api/runme?repository=https%3A%2F%2Fgithub.com%2Fsourishkrout%2Floon.git&fileToOpen=AI.md)
+
 Do you have an OpenAI key?
 
 ```sh { interactive=false }
