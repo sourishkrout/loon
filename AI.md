@@ -2,7 +2,7 @@
 
 Do you have an OpenAI key?
 
-```sh
+```sh { interactive=false }
 export OPENAI_API_KEY=Your key here
 ```
 
