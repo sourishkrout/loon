@@ -15,7 +15,7 @@ cat hi_luna.png
 What kinda scene description would you like for Luna?
 
 ```sh { interactive=false mimeType=text/x-json }
-export SCENE="a happy shepherd surrounded by pizza"
+export SCENE="a happy german shepherd dog surrounded by pizza"
 export DALLE="$(curl https://api.openai.com/v1/images/edits \
   -H "Authorization: Bearer $OPENAI_API_KEY" \
   -F image="@luna.png" \
@@ -24,11 +24,11 @@ export DALLE="$(curl https://api.openai.com/v1/images/edits \
   -F n=1 \
   -F size="512x512" \
   -s)"
-echo $DALLE_EDITS | jq -c .
+echo $DALLE | jq -c .
 ```
 
 Give it a sec... OpenAI takes about ~20-40s to produce results.
 
 ```sh { interactive=false mimeType=image/png }
-curl -Ns "$(echo $DALLE | jq -r '.data[0].url')"
+curl -s "$(echo $DALLE | jq -r '.data[0].url')"
 ```
