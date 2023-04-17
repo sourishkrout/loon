@@ -1,5 +1,11 @@
 ## Luna 🐶 exploring AI 💡 with OpenAI's DALL-E
 
+Do you have an OpenAI key?
+
+```sh
+export OPENAI_API_KEY=Your key here
+```
+
 ```sh { interactive=false mimeType=image/png }
 cat hi_luna.png
 ```
