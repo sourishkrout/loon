@@ -4,4 +4,8 @@
 
 Luna is my white German Shepherd dog and she'll be helping us experiment with generative AI in this [runme.dev](https://runme.dev) notebook.
 
-In this case, we chose to leverage OpenAI's Dall-E image editing capabilities. Hop over to [AI.md](AI.md) to jump right in.
+In this case, we chose to leverage OpenAI's Dall-E image editing capabilities.
+
+## Get Started
+
+Hop over to [AI.md](AI.md) to jump right in.
