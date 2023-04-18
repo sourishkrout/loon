@@ -4,12 +4,18 @@
 
 Luna is my white German Shepherd dog and she'll be helping us experiment with generative AI in this [runme.dev](https://runme.dev) notebook.
 
+```sh { interactive=false mimeType=image/png }
+cat hi_luna.png
+```
+
+## OpenAI's Dall-E
+
 In this case, we chose to leverage OpenAI's Dall-E image editing capabilities. Let's jump in.
 
 ```sh
 # homebrew on macOS or apt on Ubuntu
 which brew && brew install jq curl | true
-which apt && sudo apt install -y jq curl 2>/dev/null | true
+which apt && apt install && sudo apt install -y jq curl 2>/dev/null | true
 ```
 
 ### Do you have an OpenAI key?
@@ -18,10 +24,6 @@ That's really all you need. Please enter when prompted.
 
 ```sh { interactive=false }
 export OPENAI_API_KEY=Your OpenAI key here
-```
-
-```sh { interactive=false mimeType=image/png }
-cat hi_luna.png
 ```
 
 ### What kinda scene would you like?
