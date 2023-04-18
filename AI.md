@@ -14,8 +14,8 @@ In this case, we chose to leverage OpenAI's Dall-E image editing capabilities. L
 
 ```sh
 # homebrew on macOS or apt on Ubuntu
-which brew && brew install jq curl | true
-which apt && apt install && sudo apt install -y jq curl 2>/dev/null | true
+which brew && brew install jq curl; true
+which apt && apt install && sudo apt install -y jq curl 2>/dev/null; true
 ```
 
 ### Do you have an OpenAI key?
@@ -31,7 +31,7 @@ export OPENAI_API_KEY=Your OpenAI key here
 Describe the whole scene, not just the parts you'd like to be edited.
 
 ```sh { interactive=false mimeType=text/x-json }
-export SCENE="a happy german shepherd dog surrounded by pizza"
+export SCENE="a happy german shepherd dog surrounded by cheeseburgers"
 export DALLE="$(curl https://api.openai.com/v1/images/edits \
   -H "Authorization: Bearer $OPENAI_API_KEY" \
   -F image="@luna.png" \
