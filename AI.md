@@ -30,7 +30,7 @@ export OPENAI_API_KEY=Your OpenAI key here
 
 Describe the whole scene, not just the parts you'd like to be edited.
 
-```sh { interactive=false mimeType=text/x-json }
+```sh { name=run-scene interactive=false mimeType=text/x-json }
 export SCENE="a happy german shepherd dog surrounded by cheeseburgers"
 export DALLE="$(curl https://api.openai.com/v1/images/edits \
   -H "Authorization: Bearer $OPENAI_API_KEY" \
