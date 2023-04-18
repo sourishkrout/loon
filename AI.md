@@ -1,4 +1,4 @@
-### Exploring Image AI with OpenAI 🤖 + Luna 🐕
+## Exploring Image AI with OpenAI 🤖 + Luna 🐕
 
 [![](https://badgen.net/badge/Open%20with/Runme/5B3ADF?icon=https://runme.dev/img/logo.svg)](https://runme.dev/api/runme?repository=https%3A%2F%2Fgithub.com%2Fsourishkrout%2Floon.git&fileToOpen=AI.md)
 
@@ -7,8 +7,9 @@ Luna is my white German Shepherd dog and she'll be helping us experiment with ge
 In this case, we chose to leverage OpenAI's Dall-E image editing capabilities. Let's jump in.
 
 ```sh
+# homebrew on macOS or apt on Ubuntu
 which brew && brew install jq curl | true
-which apt && apt install -y jq curl | true
+which apt && sudo apt install -y jq curl 2>/dev/null | true
 ```
 
 ### Do you have an OpenAI key?
@@ -57,10 +58,16 @@ Details are available in OpenAI's docs on [image edits](https://platform.openai.
 
 ### Here are the two images included in the API request:
 
-The unmodified version. What's more important is that the dimension match a square.
+### The unmodified version.
+
+What's more important is that the dimension match a square.
 
 ![Original image of Luna](luna.png)
 
+### The Masked Version
+
 A version that acts like a mask (background 100% transparent) to let the AI know to *not* preserve the background.
+
+One could use another AI to remove the background. In my case, I just used Apple's Preview which comes with smart lasso selection.
 
 ![Masked image of Luna](luna_mask.png)
