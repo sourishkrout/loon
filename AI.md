@@ -1,12 +1,19 @@
-## Luna 🐶 exploring AI 💡 with OpenAI's DALL-E
-
-Hi, I am Luna and I'm experimenting with generative AI via [runme.dev](https://runme.dev).
+### Exploring Image AI with OpenAI 🤖 + Luna 🐕
 
 [![](https://badgen.net/badge/Open%20with/Runme/5B3ADF?icon=https://runme.dev/img/logo.svg)](https://runme.dev/api/runme?repository=https%3A%2F%2Fgithub.com%2Fsourishkrout%2Floon.git&fileToOpen=AI.md)
 
+Luna is my white German Shepherd dog and she'll be helping us experiment with generative AI in this [runme.dev](https://runme.dev) notebook.
+
+In this case, we chose to leverage OpenAI's Dall-E image editing capabilities. Let's jump in.
+
+```sh
+which brew && brew install jq curl | true
+which apt && apt install -y jq curl | true
+```
+
 ### Do you have an OpenAI key?
 
-Please enter when prompted.
+That's really all you need. Please enter when prompted.
 
 ```sh { interactive=false }
 export OPENAI_API_KEY=Your OpenAI key here
@@ -16,7 +23,9 @@ export OPENAI_API_KEY=Your OpenAI key here
 cat hi_luna.png
 ```
 
-### What kinda scene would you like? Enter when prompted.
+### What kinda scene would you like?
+
+Describe the whole scene, not just the parts you'd like to be edited.
 
 ```sh { interactive=false mimeType=text/x-json }
 export SCENE="a happy german shepherd dog surrounded by pizza"
@@ -48,10 +57,10 @@ Details are available in OpenAI's docs on [image edits](https://platform.openai.
 
 ### Here are the two images included in the API request:
 
-```sh { interactive=false mimeType=image/png }
-cat luna.png # the original image
-```
+The unmodified version. What's more important is that the dimension match a square.
 
-```sh { interactive=false mimeType=image/png }
-cat luna_mask.png # surroundings removed with 100% alpha
-```
+![Original image of Luna](luna.png)
+
+A version that acts like a mask (background 100% transparent) to let the AI know to *not* preserve the background.
+
+![Masked image of Luna](luna_mask.png)
